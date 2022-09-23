@@ -36,10 +36,6 @@
     
     String P_RESERVED = "rentalCompNm="+rentalCompNm+"&rentalCompNo="+rentalCompNo+"&rentalCompPhone="+rentalCompPhone+"&rentalRecipientNm="+rentalRecipientNm+"&rentalRecipientPhone="+rentalRecipientPhone;
 
-    /* 렌탈 상품 수령인 정보 설정 */
-    String P_RECV_POSTNUM = "00000";
-    String P_RECV_ADDR = "렌탈 상품 수령 기본 주소()";
-    String P_RECV_ADDR_DETAIL = "렌탈 상품 수령 상세 주소";
 %>
     
 <!DOCTYPE html>
@@ -59,12 +55,12 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		
 		<script> 
-            function on_pay() { 
-                myform = document.mobileweb; 
-                myform.action = "https://mobile.inicis.com/smart/payment/";
-                myform.target = "_self";
-                myform.submit(); 
-            }
+	        function on_pay() { 
+	        	myform = document.mobileweb; 
+	        	myform.action = "https://mobile.inicis.com/smart/payment/";
+	        	myform.target = "_self";
+	        	myform.submit(); 
+	        }
         </script> 
     </head>
 
@@ -103,76 +99,76 @@
 
                     <form name="mobileweb" id="" method="post" class="mt-5" accept-charset="euc-kr">
                         <div class="row g-3 justify-content-between" style="--bs-gutter-x:0rem;">
-
+				    
                             <label class="col-10 col-sm-2 input param" style="border:none;">P_INI_PAYMENT</label>
                             <label class="col-10 col-sm-9 input">
                                 <input type="text" name="P_INI_PAYMENT" value="RTPAY">
                             </label>
-
-                            <label class="col-10 col-sm-2 input param" style="border:none;">P_MID</label>
+				    		
+				    		<label class="col-10 col-sm-2 input param" style="border:none;">P_MID</label>
                             <label class="col-10 col-sm-9 input">
                                 <input type="text" name="P_MID" value="INIpayTest">
                             </label>
-
+				    
                             <label class="col-10 col-sm-2 input param" style="border:none;">P_OID</label>
                             <label class="col-10 col-sm-9 input">
                                 <input type="text" name="P_OID" value="mobile_test1234">
                             </label>
-
-                            <label class="col-10 col-sm-2 input param" style="border:none;">P_AMT</label>
+				    		
+				    		<label class="col-10 col-sm-2 input param" style="border:none;">P_AMT</label>
                             <label class="col-10 col-sm-9 input">
                                 <input type="text" name="P_AMT" value="100000">
                             </label>
-
-                            <label class="col-10 col-sm-2 input param" style="border:none;">P_GOODS</label>
+				    		
+				    		<label class="col-10 col-sm-2 input param" style="border:none;">P_GOODS</label>
                             <label class="col-10 col-sm-9 input">
                                 <input type="text" name="P_GOODS" value="테스트상품">
                             </label>
-
-                            <label class="col-10 col-sm-2 input param" style="border:none;">P_UNAME</label>
+				    		
+				    		<label class="col-10 col-sm-2 input param" style="border:none;">P_UNAME</label>
                             <label class="col-10 col-sm-9 input">
                                 <input type="text" name="P_UNAME" value="테스트">
                             </label>
-
-                            <label class="col-10 col-sm-2 input param" style="border:none;">P_MOBILE</label>
+				    		
+				    		<label class="col-10 col-sm-2 input param" style="border:none;">P_MOBILE</label>
                             <label class="col-10 col-sm-9 input">
                                 <input type="text" name="P_MOBILE" value="01012345678">
                             </label>
-
-                            <label class="col-10 col-sm-2 input param" style="border:none;">P_EMAIL</label>
+				    		
+				    		<label class="col-10 col-sm-2 input param" style="border:none;">P_EMAIL</label>
                             <label class="col-10 col-sm-9 input">
                                 <input type="text" name="P_EMAIL" value="test@test.com">
                             </label>
-
-                            <input type="hidden" name="P_NEXT_URL" value="https://[가맹점도메인]/INIrtpay_mo_return.jsp">
+				    		
+				    		<input type="hidden" name="P_NEXT_URL" value="https://[가맹점도메인]/INIrtpay_mo_return.jsp">
                             <input type="hidden" name="P_CHARSET" value="utf8">
-
-                            <label class="col-10 col-sm-2 input param" style="border:none;">P_RESERVED</label>
+                            
+				    		<label class="col-10 col-sm-2 input param" style="border:none;">P_RESERVED</label>
                             <label class="col-10 col-sm-9 input">
-                                <input type="text" name="P_RESERVED" value="<%=P_RESERVED %>">
+                            	<input type="text" name="P_RESERVED" value="<%=P_RESERVED %>">
                             </label>
-
+                            
                             <label class="col-10 col-sm-2 input param" style="border:none;">P_RECV_POSTNUM</label>
                             <label class="col-10 col-sm-9 input">
-                                <input type="text" name="P_RECV_POSTNUM" value="<%=P_RECV_POSTNUM %>">
+                                <input type="text" name="P_RECV_POSTNUM" value="10266">
                             </label>
-
+                            
                             <label class="col-10 col-sm-2 input param" style="border:none;">P_RECV_ADDR</label>
                             <label class="col-10 col-sm-9 input">
-                                <input type="text" name="P_RECV_ADDR" value="<%=P_RECV_ADDR %>">
+                                <input type="text" name="P_RECV_ADDR" value="중구 통일로 92 KG타워">
                             </label>
-
+                            
                             <label class="col-10 col-sm-2 input param" style="border:none;">P_RECV_ADDR_DETAIL</label>
                             <label class="col-10 col-sm-9 input">
-                                <input type="text" name="P_RECV_ADDR_DETAIL" value="<%=P_RECV_ADDR_DETAIL %>">
+                                <input type="text" name="P_RECV_ADDR_DETAIL" value="14,15층">
                             </label>
-
+                            
                             <input type="hidden" name="additionalData" value="<%=encodeResult1 %>">
                         </div>
                     </form>
-
-                    <button onclick="on_pay()" class="btn_solid_pri col-6 mx-auto btn_lg" style="margin-top:50px">결제 요청</button>
-
+				
+				    <button onclick="on_pay()" class="btn_solid_pri col-6 mx-auto btn_lg" style="margin-top:50px">결제 요청</button>
+					
                 </div>
             </section>
 			
