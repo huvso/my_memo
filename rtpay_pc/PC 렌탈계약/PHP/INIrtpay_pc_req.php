@@ -26,7 +26,11 @@ $modelName  = 'R0001';
 $serialNo = '20201205050000';
 
 $additionalData = urlencode('{"product":[{"category":"'.$category.'","manufacturer":"'.$manufacturer.'","modelName":"'.$modelName.'","serialNo":"'.$serialNo.'"}]}');
-	
+
+/* 렌탈 상품 수령인 정보 설정 */
+$postNum = "00000";
+$address = "렌탈 상품 수령 기본 주소";
+$addressDtl = "렌탈 상품 수령 상세 주소";
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -154,17 +158,17 @@ $additionalData = urlencode('{"product":[{"category":"'.$category.'","manufactur
 							
 							<label class="col-10 col-sm-2 input param" style="border:none;">postNum</label>
                             <label class="col-10 col-sm-9 input">
-                                <input type="text" name="postNum" value="10266">
+                                <input type="text" name="postNum" value="<?php echo $postNum ?>">
                             </label>
 							
 							<label class="col-10 col-sm-2 input param" style="border:none;">address</label>
                             <label class="col-10 col-sm-9 input">
-                                <input type="text" name="address" value="중구 통일로 92 KG타워">
+                                <input type="text" name="address" value="<?php echo $address ?>">
                             </label>
 							
 							<label class="col-10 col-sm-2 input param" style="border:none;">addressDtl</label>
                             <label class="col-10 col-sm-9 input">
-                                <input type="text" name="addressDtl" value="14,15층">
+                                <input type="text" name="addressDtl" value="<?php echo $addressDtl ?>">
                             </label>
 							
 							<label class="col-10 col-sm-2 input param" style="border:none;">rentalPeriod</label>
