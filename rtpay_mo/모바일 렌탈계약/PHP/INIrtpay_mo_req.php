@@ -131,17 +131,17 @@ $P_RECV_ADDR_DETAIL = "렌탈 상품 수령 상세 주소";
 							
 							<label class="col-10 col-sm-2 input param" style="border:none;">P_RECV_POSTNUM</label>
                             <label class="col-10 col-sm-9 input">
-                                <input type="text" name="P_RECV_POSTNUM" value="<%=P_RECV_POSTNUM %>">
+                                <input type="text" name="P_RECV_POSTNUM" value="<?php echo P_RECV_POSTNUM ?>">
                             </label>
 							
 							<label class="col-10 col-sm-2 input param" style="border:none;">P_RECV_ADDR</label>
                             <label class="col-10 col-sm-9 input">
-                                <input type="text" name="P_RECV_ADDR" value="<%=P_RECV_ADDR %>">
+                                <input type="text" name="P_RECV_ADDR" value="<?php echo P_RECV_ADDR ?>">
                             </label>
 							
 							<label class="col-10 col-sm-2 input param" style="border:none;">P_RECV_ADDR_DETAIL</label>
                             <label class="col-10 col-sm-9 input">
-                                <input type="text" name="P_RECV_ADDR_DETAIL" value="<%=P_RECV_ADDR_DETAIL %>">
+                                <input type="text" name="P_RECV_ADDR_DETAIL" value="<?php echo P_RECV_ADDR_DETAIL ?>">
                             </label>
                             
 				    		<label class="col-10 col-sm-2 input param" style="border:none;">P_RESERVED</label>
