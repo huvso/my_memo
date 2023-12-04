@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  title: Collection Test
+  version: 1.0.0
+servers:
+  - url: https://localhost:8080
+tags:
+  - name: New Folder
+  - name: New Folder > New Folder
+  - name: New Folder > New Folder > New Folder
+paths:
+  /:
+    get:
+      tags:
+        - New Folder
+      summary: https://localhost:8080?test=test Copy
+      parameters:
+        - name: test
+          in: query
+          schema:
+            type: string
+          description: '[asdf, asdf,asdf ,asdf ,asdf]'
+          example: test
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
